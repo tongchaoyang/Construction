@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="about.pageTitle">About Us | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="about">
+  <header id="site-header"></header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="about.title">About Landmark Construction &amp; ADU</h2>
+        <p data-i18n="about.subtitle">里程建筑 — Building trust, one project at a time.</p>
+      </div>
+
+      <div class="detail-description" style="max-width:800px;margin:0 auto 30px;">
+        <p data-i18n="about.paragraph1">Landmark Construction &amp; ADU is a licensed general building contractor based in San Jose, California, serving homeowners across Silicon Valley. We specialize in new home construction, Accessory Dwelling Units (ADUs), home remodeling, and earthquake retrofit work.</p>
+        <p data-i18n="about.paragraph2">Our bilingual team works closely with English- and Chinese-speaking clients throughout the Bay Area, guiding every project from initial design through permitting, construction, and final walkthrough.</p>
+      </div>
+
+      <div class="license-strip" style="max-width:800px;margin:0 auto 30px;">
+        <div class="license-images">
+          <img src="/assets/images/license1.png" alt="CSLB Contractor License Certificate #1140588">
+          <img src="/assets/images/license2.png" alt="CSLB Active License Card #1140588">
+        </div>
+        <div>
+          <h3 style="margin-top:0;color:var(--color-navy);" data-i18n="about.licenseTitle">License Information</h3>
+          <p style="margin:4px 0;"><strong data-i18n="about.licenseNumber">CSLB License #</strong>: 1140588</p>
+          <p style="margin:4px 0;"><strong data-i18n="about.licenseClass">Classification</strong>: B - General Building</p>
+        </div>
+      </div>
+
+      <div class="service-card" style="max-width:800px;margin:0 auto;">
+        <h3 data-i18n="about.contactTitle">Contact Us</h3>
+        <p style="margin:4px 0;">97 E Brokaw Rd, STE 110, San Jose, CA 95112</p>
+        <p style="margin:4px 0;"><a href="tel:4089159235">408-915-9235</a></p>
+        <p style="margin:4px 0;"><a href="mailto:landmarkadu@gmail.com">landmarkadu@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/lightbox.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => makeImagesClickable(".license-images img"));
+  </script>
+</body>
+</html>

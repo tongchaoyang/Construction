@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "quote": "Request a Quote",
+    "about": "About",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "changePassword": "Change Password",
+    "adminPortal": "Admin Portal"
+  },
+  "footer": {
+    "tagline": "Residential construction, ADU, remodeling & earthquake retrofit in Silicon Valley.",
+    "contact": "Contact",
+    "links": "Quick Links",
+    "adminLogin": "Admin Login",
+    "license": "License",
+    "licenseText": "CSLB License #1140588 (Class B - General Building)",
+    "copyright": "© 2026 Landmark Construction & ADU. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "Building Homes, ADUs & Remodeling Across Silicon Valley",
+    "heroSubtitle": "We are a licensed (CSLB #1140588), insured, full-service construction company proudly serving the Silicon Valley. As a trusted one-stop shop, we are specialized in design-to-build services of new home construction, additions, remodeling, ADUs, and custom renovations, managing every aspect of your project including permits and inspections from start to finish. We will provide you with detailed estimates, realistic timelines, and consistent communication throughout the project. Our creative team works with you to bring your vision to life, while our skilled construction team ensures flawless execution. With personalized project management and clear communication at every step, we provide peace of mind and total transparency. Our top priority is providing superior quality and exceeding customer expectations.",
+    "ctaQuote": "Request a Free Quote",
+    "ctaProjects": "View Our Projects",
+    "whyUs": "Why Landmark",
+    "why1": "CSLB Licensed & Insured (#1140588)",
+    "why2": "ADU & BOXABL Authorized Agent",
+    "why3": "EBB-Certified Earthquake Retrofit, up to $10,000 grant",
+    "why4": "Bilingual team — English & 中文",
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "From ground-up builds to targeted retrofits, we handle every phase of your project.",
+    "featuredTitle": "Recently Completed Projects",
+    "featuredSubtitle": "A sample of our recent work — browse the full gallery for more.",
+    "viewAll": "View All Projects",
+    "licenseTitle": "Licensed & Trusted",
+    "licenseText": "Landmark Construction & ADU holds an active California Contractors State License Board license (#1140588, Class B - General Building). We stand behind every project with proper licensing, insurance, and a skilled construction team."
+  },
+  "services": {
+    "newConstruction": {
+      "title": "New Construction & Addition",
+      "item1": "Renovation and expansion",
+      "item2": "Accessory Dwelling Units (ADU)",
+      "item3": "Skilled in-house construction team",
+      "item4": "BOXABL authorized agent"
+    },
+    "retrofit": {
+      "title": "Earthquake Retrofit",
+      "item1": "EBB certification",
+      "item2": "Experienced retrofit contractors",
+      "item3": "Eligible for up to $10,000 grant",
+      "item4": "We help with EBB grant applications"
+    },
+    "remodeling": {
+      "title": "Home Remodeling",
+      "item1": "Flooring and tile installation",
+      "item2": "Kitchen and bathroom remodels",
+      "item3": "Exterior wall renovation",
+      "item4": "Interior & exterior painting"
+    }
+  },
+  "category": {
+    "ALL": "All",
+    "NEW_CONSTRUCTION": "New Construction",
+    "ADU": "ADU",
+    "REMODELING": "Remodeling",
+    "EARTHQUAKE_RETROFIT": "Earthquake Retrofit",
+    "OTHER": "Other"
+  },
+  "projects": {
+    "title": "Completed Projects",
+    "subtitle": "Browse our recent new construction, ADU, remodeling, and retrofit projects.",
+    "empty": "No projects published yet. Check back soon!",
+    "noReviews": "No reviews yet"
+  },
+  "common": {
+    "loading": "Loading..."
+  },
+  "detail": {
+    "pageTitle": "Project Details | Landmark Construction & ADU",
+    "missingId": "No project specified.",
+    "reviewsTitle": "Customer Reviews",
+    "editReview": "Edit Your Review",
+    "addReview": "Leave a Review",
+    "commentPlaceholder": "Share your experience (optional)",
+    "updateReview": "Update Review",
+    "submitReview": "Submit Review",
+    "deleteReview": "Delete My Review",
+    "selectRating": "Please select a star rating.",
+    "confirmDelete": "Delete your review?",
+    "loginToReview": "Please log in to leave a rating and comment.",
+    "noReviews": "Be the first to review this project."
+  },
+  "login": {
+    "pageTitle": "Log In | Landmark Construction & ADU",
+    "title": "Welcome Back",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log In",
+    "noAccount": "Don't have an account?"
+  },
+  "register": {
+    "pageTitle": "Sign Up | Landmark Construction & ADU",
+    "title": "Create Your Account",
+    "subtitle": "An account lets you rate and comment on our completed projects.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "password": "Password",
+    "passwordHint": "At least 8 characters.",
+    "submit": "Sign Up",
+    "haveAccount": "Already have an account?"
+  },
+  "changePassword": {
+    "pageTitle": "Change Password | Landmark Construction & ADU",
+    "title": "Change Password",
+    "current": "Current Password",
+    "new": "New Password",
+    "confirm": "Confirm New Password",
+    "submit": "Update Password",
+    "mismatch": "New passwords do not match.",
+    "success": "Your password has been updated."
+  },
+  "sso": {
+    "signingIn": "Signing you in...",
+    "divider": "or",
+    "signInWithGoogle": "Sign in with Google",
+    "loginFailed": "Single sign-on failed. Please try again or log in with your password.",
+    "noEmail": "Your identity provider did not share an email address, so we could not sign you in."
+  },
+  "quote": {
+    "pageTitle": "Request a Quote | Landmark Construction & ADU",
+    "title": "Request a Free Quote",
+    "subtitle": "Tell us about your project and upload photos of your lot, house, or rooms — no account needed.",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "category": "Project Type",
+    "description": "Describe What You Want to Accomplish",
+    "descriptionPlaceholder": "e.g. I want to add a 500 sq ft detached ADU in my backyard...",
+    "photos": "Photos of Your Lot / House / Rooms",
+    "photosHint": "Up to 10 photos, JPEG/PNG/WEBP, 8MB max each.",
+    "submit": "Submit Request",
+    "successMessage": "Thank you! Your request has been submitted. Our team will contact you shortly."
+  },
+  "about": {
+    "pageTitle": "About Us | Landmark Construction & ADU",
+    "title": "About Landmark Construction & ADU",
+    "subtitle": "里程建筑 — Building trust, one project at a time.",
+    "paragraph1": "We are a licensed (CSLB #1140588), insured, full-service construction company proudly serving the Silicon Valley. As a trusted one-stop shop, we are specialized in design-to-build services of new home construction, additions, remodeling, ADUs, and custom renovations, managing every aspect of your project including permits and inspections from start to finish. We will provide you with detailed estimates, realistic timelines, and consistent communication throughout the project. Our creative team works with you to bring your vision to life, while our skilled construction team ensures flawless execution. With personalized project management and clear communication at every step, we provide peace of mind and total transparency. Our top priority is providing superior quality and exceeding customer expectations.",
+    "paragraph2": "Our bilingual team works closely with English- and Chinese-speaking clients throughout the Bay Area, guiding every project from initial design through permitting, construction, and final walkthrough.",
+    "licenseTitle": "License Information",
+    "licenseNumber": "CSLB License #",
+    "licenseClass": "Classification",
+    "contactTitle": "Contact Us"
+  }
+}

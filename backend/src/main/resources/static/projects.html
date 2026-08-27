@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="projects">
+  <header id="site-header"></header>
+
+  <section style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="projects.title">Completed Projects</h2>
+        <p data-i18n="projects.subtitle">Browse our recent new construction, ADU, remodeling, and retrofit projects.</p>
+      </div>
+      <div class="filter-bar" id="category-filter">
+        <button data-category="" class="active" data-i18n="category.ALL">All</button>
+        <button data-category="NEW_CONSTRUCTION" data-i18n="category.NEW_CONSTRUCTION">New Construction</button>
+        <button data-category="ADU" data-i18n="category.ADU">ADU</button>
+        <button data-category="REMODELING" data-i18n="category.REMODELING">Remodeling</button>
+        <button data-category="EARTHQUAKE_RETROFIT" data-i18n="category.EARTHQUAKE_RETROFIT">Earthquake Retrofit</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px;">
+    <div class="container">
+      <div class="project-grid" id="project-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/shared.js"></script>
+  <script src="/assets/js/projects.js"></script>
+</body>
+</html>

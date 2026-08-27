@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landmark Construction &amp; ADU | Silicon Valley Residential Construction</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-i18n="home.heroTitle">Building Homes, ADUs &amp; Additions Across Silicon Valley</h1>
+        <p data-i18n="home.heroSubtitle">Licensed General Building contractor (CSLB #1140588) specializing in new construction, ADUs, remodeling, and earthquake retrofit — serving San Jose and the surrounding Bay Area.</p>
+        <div class="hero-cta">
+          <a href="/quote-request.html" class="btn btn-primary" data-i18n="home.ctaQuote">Request a Free Quote</a>
+          <a href="/projects.html" class="btn btn-outline-light" data-i18n="home.ctaProjects">View Our Projects</a>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <h3 data-i18n="home.whyUs">Why Landmark</h3>
+        <ul>
+          <li data-i18n="home.why1">CSLB Licensed &amp; Insured (#1140588)</li>
+          <li data-i18n="home.why2">ADU &amp; BOXABL Authorized Agent</li>
+          <li data-i18n="home.why3">EBB-Certified Earthquake Retrofit, up to $10,000 grant</li>
+          <li data-i18n="home.why4">Bilingual team — English &amp; 中文</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="home.servicesTitle">Our Services</h2>
+        <p data-i18n="home.servicesSubtitle">From ground-up builds to targeted retrofits, we handle every phase of your project.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 data-i18n="services.newConstruction.title">New Construction &amp; Addition</h3>
+          <ul>
+            <li data-i18n="services.newConstruction.item1">Renovation and expansion</li>
+            <li data-i18n="services.newConstruction.item2">Accessory Dwelling Units (ADU)</li>
+            <li data-i18n="services.newConstruction.item3">Skilled in-house construction team</li>
+            <li data-i18n="services.newConstruction.item4">BOXABL authorized agent</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3 data-i18n="services.retrofit.title">Earthquake Retrofit</h3>
+          <ul>
+            <li data-i18n="services.retrofit.item1">EBB certification</li>
+            <li data-i18n="services.retrofit.item2">Experienced retrofit contractors</li>
+            <li data-i18n="services.retrofit.item3">Eligible for up to $10,000 grant</li>
+            <li data-i18n="services.retrofit.item4">We help with EBB grant applications</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3 data-i18n="services.remodeling.title">Home Remodeling</h3>
+          <ul>
+            <li data-i18n="services.remodeling.item1">Flooring and tile installation</li>
+            <li data-i18n="services.remodeling.item2">Kitchen and bathroom remodels</li>
+            <li data-i18n="services.remodeling.item3">Exterior wall renovation</li>
+            <li data-i18n="services.remodeling.item4">Interior &amp; exterior painting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="home.featuredTitle">Recently Completed Projects</h2>
+        <p data-i18n="home.featuredSubtitle">A sample of our recent work — browse the full gallery for more.</p>
+      </div>
+      <div class="project-grid" id="featured-projects"></div>
+      <div style="text-align:center;margin-top:30px;">
+        <a href="/projects.html" class="btn btn-secondary" data-i18n="home.viewAll">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="license-strip">
+        <div class="license-images">
+          <img src="/assets/images/license1.png" alt="CSLB Contractor License Certificate #1140588">
+          <img src="/assets/images/license2.png" alt="CSLB Active License Card #1140588">
+        </div>
+        <div>
+          <h3 style="margin-top:0;color:var(--color-navy);" data-i18n="home.licenseTitle">Licensed &amp; Trusted</h3>
+          <p data-i18n="home.licenseText">Landmark Construction &amp; ADU holds an active California Contractors State License Board license (#1140588, Class B - General Building). We stand behind every project with proper licensing, insurance, and a skilled construction team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/shared.js"></script>
+  <script src="/assets/js/home.js"></script>
+  <script src="/assets/js/lightbox.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => makeImagesClickable(".license-images img"));
+  </script>
+</body>
+</html>

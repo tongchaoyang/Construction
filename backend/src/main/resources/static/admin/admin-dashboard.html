@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header id="admin-header"></header>
+  <div class="admin-shell">
+    <nav class="admin-sidebar" id="admin-sidebar"></nav>
+    <main class="admin-content">
+      <h1 style="color:var(--color-navy);">Dashboard</h1>
+      <div class="stat-cards" id="stat-cards">
+        <div class="stat-card"><div class="value">—</div><div class="label">Loading...</div></div>
+      </div>
+      <h2 style="color:var(--color-navy);">Recent Quote Requests</h2>
+      <table class="data-table" id="recent-quotes-table">
+        <thead><tr><th>Name</th><th>Category</th><th>Status</th><th>Received</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/admin/admin-shell.js"></script>
+  <script src="/assets/js/admin/admin-dashboard.js"></script>
+</body>
+</html>

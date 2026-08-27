@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "home": "首页",
+    "projects": "项目案例",
+    "quote": "免费报价",
+    "about": "关于我们",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出登录",
+    "changePassword": "修改密码",
+    "adminPortal": "管理后台"
+  },
+  "footer": {
+    "tagline": "硅谷地区住宅新建、ADU、装修与地震加固专家。",
+    "contact": "联系方式",
+    "links": "快速链接",
+    "adminLogin": "管理员登录",
+    "license": "执照信息",
+    "licenseText": "加州承包商执照 CSLB #1140588（B类 - 综合建筑）",
+    "copyright": "© 2026 里程建筑 Landmark Construction & ADU. 保留所有权利。"
+  },
+  "home": {
+    "heroTitle": "深耕硅谷，承建新房、ADU与房屋装修",
+    "heroSubtitle": "我们是持有加州承包商执照（CSLB #1140588）并投保的全方位建筑公司，自豪地服务于硅谷地区。作为值得信赖的一站式服务商，我们专注于新房建造、扩建、装修、ADU及定制翻新的设计施工一体化服务，全程为您管理项目的每一个环节，包括许可申请与验收检查。我们将为您提供详细的报价、切合实际的工期安排，以及项目全程中始终如一的沟通。我们的创意团队与您携手将构想变为现实，专业的施工团队则确保完美落地。凭借个性化的项目管理和每一步都清晰透明的沟通，我们为您带来安心保障与全程透明。提供卓越品质、超越客户期望，是我们始终坚持的首要目标。",
+    "ctaQuote": "获取免费报价",
+    "ctaProjects": "查看项目案例",
+    "whyUs": "为什么选择里程建筑",
+    "why1": "持有CSLB执照并投保（#1140588）",
+    "why2": "ADU与BOXABL授权代理商",
+    "why3": "EBB认证地震加固，最高可获$10,000补助",
+    "why4": "中英双语团队",
+    "servicesTitle": "我们的服务",
+    "servicesSubtitle": "从新建工程到专项加固，我们为您的项目提供全流程服务。",
+    "featuredTitle": "近期完工项目",
+    "featuredSubtitle": "以下是我们近期部分作品，欢迎浏览完整项目案例。",
+    "viewAll": "查看全部项目",
+    "licenseTitle": "持证经营，值得信赖",
+    "licenseText": "里程建筑持有有效的加州承包商州执照委员会执照（#1140588，B类 - 综合建筑）。我们凭借合规执照、完善保险及专业施工团队，为每个项目保驾护航。"
+  },
+  "services": {
+    "newConstruction": {
+      "title": "新建与扩建工程",
+      "item1": "房屋翻新与扩建",
+      "item2": "附属住宅单元（ADU）",
+      "item3": "专业自有施工团队",
+      "item4": "BOXABL授权代理商"
+    },
+    "retrofit": {
+      "title": "地震加固",
+      "item1": "EBB认证资质",
+      "item2": "经验丰富的抗震加固团队",
+      "item3": "最高可获$10,000补助资格",
+      "item4": "协助申请EBB补助金"
+    },
+    "remodeling": {
+      "title": "房屋装修",
+      "item1": "地板与瓷砖铺装",
+      "item2": "厨房与浴室翻新",
+      "item3": "外墙翻新",
+      "item4": "室内外油漆粉刷"
+    }
+  },
+  "category": {
+    "ALL": "全部",
+    "NEW_CONSTRUCTION": "新建工程",
+    "ADU": "ADU",
+    "REMODELING": "房屋装修",
+    "EARTHQUAKE_RETROFIT": "地震加固",
+    "OTHER": "其他"
+  },
+  "projects": {
+    "title": "已完工项目",
+    "subtitle": "浏览我们近期完成的新建、ADU、装修及地震加固项目。",
+    "empty": "暂无已发布的项目，敬请期待！",
+    "noReviews": "暂无评价"
+  },
+  "common": {
+    "loading": "加载中..."
+  },
+  "detail": {
+    "pageTitle": "项目详情 | 里程建筑 Landmark Construction & ADU",
+    "missingId": "未指定项目。",
+    "reviewsTitle": "客户评价",
+    "editReview": "编辑我的评价",
+    "addReview": "发表评价",
+    "commentPlaceholder": "分享您的体验（选填）",
+    "updateReview": "更新评价",
+    "submitReview": "提交评价",
+    "deleteReview": "删除我的评价",
+    "selectRating": "请选择星级评分。",
+    "confirmDelete": "确定删除您的评价吗？",
+    "loginToReview": "请登录后发表评分与评论。",
+    "noReviews": "成为第一个评价此项目的人。"
+  },
+  "login": {
+    "pageTitle": "登录 | 里程建筑 Landmark Construction & ADU",
+    "title": "欢迎回来",
+    "email": "邮箱",
+    "password": "密码",
+    "submit": "登录",
+    "noAccount": "还没有账户？"
+  },
+  "register": {
+    "pageTitle": "注册 | 里程建筑 Landmark Construction & ADU",
+    "title": "创建您的账户",
+    "subtitle": "注册账户后即可为我们的完工项目评分与评论。",
+    "fullName": "姓名",
+    "email": "邮箱",
+    "phone": "电话（选填）",
+    "password": "密码",
+    "passwordHint": "至少8个字符。",
+    "submit": "注册",
+    "haveAccount": "已有账户？"
+  },
+  "changePassword": {
+    "pageTitle": "修改密码 | 里程建筑 Landmark Construction & ADU",
+    "title": "修改密码",
+    "current": "当前密码",
+    "new": "新密码",
+    "confirm": "确认新密码",
+    "submit": "更新密码",
+    "mismatch": "两次输入的新密码不一致。",
+    "success": "密码已成功更新。"
+  },
+  "sso": {
+    "signingIn": "正在为您登录...",
+    "divider": "或",
+    "signInWithGoogle": "使用 Google 登录",
+    "loginFailed": "单点登录失败，请重试，或使用密码登录。",
+    "noEmail": "您的身份提供方未提供邮箱地址，因此无法为您登录。"
+  },
+  "quote": {
+    "pageTitle": "免费报价 | 里程建筑 Landmark Construction & ADU",
+    "title": "获取免费报价",
+    "subtitle": "告诉我们您的项目需求，并上传您的地块、房屋或房间照片——无需注册账户。",
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "category": "项目类型",
+    "description": "请描述您想实现的目标",
+    "descriptionPlaceholder": "例如：我想在后院加建一个500平方英尺的独立ADU……",
+    "photos": "地块/房屋/房间照片",
+    "photosHint": "最多10张照片，支持JPEG/PNG/WEBP格式，单张最大8MB。",
+    "submit": "提交请求",
+    "successMessage": "感谢您的提交！我们的团队将尽快与您联系。"
+  },
+  "about": {
+    "pageTitle": "关于我们 | 里程建筑 Landmark Construction & ADU",
+    "title": "关于里程建筑 Landmark Construction & ADU",
+    "subtitle": "里程建筑 — 用心筑就每一份信任。",
+    "paragraph1": "我们是持有加州承包商执照（CSLB #1140588）并投保的全方位建筑公司，自豪地服务于硅谷地区。作为值得信赖的一站式服务商，我们专注于新房建造、扩建、装修、ADU及定制翻新的设计施工一体化服务，全程为您管理项目的每一个环节，包括许可申请与验收检查。我们将为您提供详细的报价、切合实际的工期安排，以及项目全程中始终如一的沟通。我们的创意团队与您携手将构想变为现实，专业的施工团队则确保完美落地。凭借个性化的项目管理和每一步都清晰透明的沟通，我们为您带来安心保障与全程透明。提供卓越品质、超越客户期望，是我们始终坚持的首要目标。",
+    "paragraph2": "我们的双语团队与湾区的英语及中文客户紧密合作，从最初的设计方案到许可申请、施工建造直至最终验收，全程为您提供专业指导。",
+    "licenseTitle": "执照信息",
+    "licenseNumber": "CSLB执照号",
+    "licenseClass": "资质类别",
+    "contactTitle": "联系我们"
+  }
+}

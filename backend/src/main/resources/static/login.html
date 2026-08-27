@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="login.pageTitle">Log In | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="login">
+  <header id="site-header"></header>
+
+  <section>
+    <div class="container">
+      <div class="form-card">
+        <h2 style="margin-top:0;text-align:center;" data-i18n="login.title">Welcome Back</h2>
+        <div id="form-error"></div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email" data-i18n="login.email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password" data-i18n="login.password">Password</label>
+            <input type="password" id="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="login.submit">Log In</button>
+        </form>
+        <div id="sso-buttons"></div>
+        <p style="text-align:center;margin-top:16px;">
+          <span data-i18n="login.noAccount">Don't have an account?</span>
+          <a href="/register.html" data-i18n="nav.register">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/sso.js"></script>
+  <script>
+    renderSsoButtons("sso-buttons");
+
+    const ssoError = new URLSearchParams(window.location.search).get("error");
+    if (ssoError === "sso_failed") {
+      document.getElementById("form-error").innerHTML =
+        `<div class="alert alert-error" data-i18n="sso.loginFailed">Single sign-on failed. Please try again or log in with your password.</div>`;
+    } else if (ssoError === "sso_no_email") {
+      document.getElementById("form-error").innerHTML =
+        `<div class="alert alert-error" data-i18n="sso.noEmail">Your identity provider did not share an email address, so we could not sign you in.</div>`;
+    }
+
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const errorBox = document.getElementById("form-error");
+      errorBox.innerHTML = "";
+      try {
+        await Auth.login(document.getElementById("email").value.trim(), document.getElementById("password").value);
+        const redirect = new URLSearchParams(window.location.search).get("redirect");
+        window.location.href = redirect || "/index.html";
+      } catch (err) {
+        errorBox.innerHTML = `<div class="alert alert-error">${err.message}</div>`;
+      }
+    });
+  </script>
+</body>
+</html>

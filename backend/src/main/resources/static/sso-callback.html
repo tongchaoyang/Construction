@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signing you in... | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <section>
+    <div class="container" style="text-align:center;padding-top:80px;padding-bottom:80px;">
+      <p id="status-message" data-i18n="sso.signingIn">Signing you in...</p>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script>
+    (async () => {
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      const token = params.get("token");
+      if (!token) {
+        window.location.href = "/login.html?error=sso_failed";
+        return;
+      }
+      try {
+        localStorage.setItem("lm_token", token);
+        const user = await api.get("/auth/me");
+        localStorage.setItem("lm_user", JSON.stringify(user));
+        window.location.href = user.role === "ADMIN" ? "/admin/admin-dashboard.html" : "/index.html";
+      } catch (e) {
+        localStorage.removeItem("lm_token");
+        window.location.href = "/login.html?error=sso_failed";
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="quote.pageTitle">Request a Quote | Landmark Construction &amp; ADU</title>
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="quote">
+  <header id="site-header"></header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="quote.title">Request a Free Quote</h2>
+        <p data-i18n="quote.subtitle">Tell us about your project and upload photos of your lot, house, or rooms — no account needed.</p>
+      </div>
+      <div class="form-card">
+        <div id="form-success"></div>
+        <div id="form-error"></div>
+        <form id="quote-form">
+          <div class="form-group">
+            <label for="name" data-i18n="quote.name">Full Name</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="quote.email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-i18n="quote.phone">Phone</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="category" data-i18n="quote.category">Project Type</label>
+            <select id="category" required>
+              <option value="NEW_CONSTRUCTION" data-i18n="category.NEW_CONSTRUCTION">New Construction</option>
+              <option value="ADU" data-i18n="category.ADU">ADU</option>
+              <option value="REMODELING" data-i18n="category.REMODELING">Remodeling</option>
+              <option value="EARTHQUAKE_RETROFIT" data-i18n="category.EARTHQUAKE_RETROFIT">Earthquake Retrofit</option>
+              <option value="OTHER" data-i18n="category.OTHER">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description" data-i18n="quote.description">Describe What You Want to Accomplish</label>
+            <textarea id="description" required data-i18n-placeholder="quote.descriptionPlaceholder" placeholder="e.g. I want to add a 500 sq ft detached ADU in my backyard..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="files" data-i18n="quote.photos">Photos of Your Lot / House / Rooms</label>
+            <input type="file" id="files" accept="image/png,image/jpeg,image/webp" multiple>
+            <div class="form-hint" data-i18n="quote.photosHint">Up to 10 photos, JPEG/PNG/WEBP, 8MB max each.</div>
+            <div class="file-preview-grid" id="file-preview"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;" id="submit-btn" data-i18n="quote.submit">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/quote-request.js"></script>
+</body>
+</html>
