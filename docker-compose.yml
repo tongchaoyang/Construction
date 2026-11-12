@@ -56,7 +56,7 @@ services:
       minio-init:
         condition: service_completed_successfully
     environment:
-      SPRING_PROFILES_ACTIVE: prod
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
       DB_URL: jdbc:postgresql://postgres:5432/landmark
       DB_USERNAME: landmark
       DB_PASSWORD: landmark

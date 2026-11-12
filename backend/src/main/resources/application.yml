@@ -1,6 +1,6 @@
 spring:
   application:
-    name: landmark-backend
+    name: landmark
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
   jpa:
@@ -21,7 +21,7 @@ spring:
   mail:
     host: ${SMTP_HOST:smtp.gmail.com}
     port: ${SMTP_PORT:587}
-    username: ${SMTP_USERNAME:}
+    username: ${SMTP_USERNAME:landmarkadu@gmail.com}
     password: ${SMTP_APP_PASSWORD:}
     properties:
       mail:
