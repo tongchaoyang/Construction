@@ -86,6 +86,8 @@ services:
     env_file: .env
     environment:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+      # Trust Caddy's X-Forwarded-* headers so SSO builds https:// redirect URIs behind the proxy
+      SERVER_FORWARD_HEADERS_STRATEGY: framework
       DB_URL: jdbc:postgresql://postgres:5432/landmark
       DB_USERNAME: landmark
       DB_PASSWORD: landmark
