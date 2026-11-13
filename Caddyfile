@@ -11,3 +11,8 @@ https://localhost {
     tls internal
     reverse_proxy backend:8080
 }
+
+# Send www to the main domain (keeps sign-in on the one hostname registered with Google)
+www.landmarkadu.com {
+    redir https://landmarkadu.com{uri} permanent
+}
