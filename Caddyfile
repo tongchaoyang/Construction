@@ -1,3 +1,13 @@
 landmarkadu.com, ://landmarkadu.com {
     reverse_proxy backend:8080
 }
+
+# Local development: http://localhost (https://localhost uses Caddy's internal, self-signed cert)
+http://localhost {
+    reverse_proxy backend:8080
+}
+
+https://localhost {
+    tls internal
+    reverse_proxy backend:8080
+}

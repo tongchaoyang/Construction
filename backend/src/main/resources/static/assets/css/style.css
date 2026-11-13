@@ -6,6 +6,7 @@
   --color-accent-dark: #7d1220;
   --color-gold: #c9a227;
   --color-bg: #e7ebf1;
+  --gradient-hero: linear-gradient(135deg, var(--color-navy-light) 0%, var(--color-accent) 100%);
   --color-surface: #ffffff;
   --color-text: #1f2937;
   --color-muted: #6b7280;
@@ -186,7 +187,7 @@ img {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--color-navy-light) 0%, var(--color-accent) 100%);
+  background: var(--gradient-hero);
   color: #fff;
   padding: 64px 0;
 }
@@ -255,6 +256,25 @@ section {
 }
 .section-title p {
   color: var(--color-muted);
+}
+
+/* Page banner: same gradient as the home page hero, used at the top of inner pages */
+.page-banner {
+  background: var(--gradient-hero);
+  color: #fff;
+  padding: 40px 0;
+}
+.page-banner .section-title {
+  margin-bottom: 0;
+}
+.page-banner .section-title h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  margin: 0;
+}
+.page-banner .section-title p {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 8px 0 0;
 }
 
 .services-grid {
