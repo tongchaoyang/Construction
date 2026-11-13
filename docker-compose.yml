@@ -61,16 +61,29 @@ services:
         EOF
         $$S3 s3api put-bucket-policy --bucket landmark-photos --policy file:///tmp/policy.json
 
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
   backend:
     build:
       context: ./backend
-    ports:
-      - "8080:8080"
+    #ports:
+      #- "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy
       s3-init:
         condition: service_completed_successfully
+    restart: unless-stopped
+    env_file: .env
     environment:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
       DB_URL: jdbc:postgresql://postgres:5432/landmark
@@ -90,3 +103,5 @@ services:
 volumes:
   pgdata:
   rustfs-data:
+  caddy_data:
+  caddy_config:
