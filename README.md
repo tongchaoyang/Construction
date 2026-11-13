@@ -10,14 +10,14 @@ Bilingual (English / 中文) marketing website for Landmark Construction & ADU, 
 - Open "Request a Quote" form (no account required) with multi-photo upload of the customer's lot/house/rooms
 - Email notifications (business inbox + customer confirmation) on new quote requests
 - Admin portal to manage projects (with photo upload/reorder), quote requests (status tracking), and moderate reviews
-- Images stored in S3-compatible object storage (works with MinIO locally, AWS S3 / Cloudflare R2 in production)
+- Images stored in S3-compatible object storage (works with RustFS locally, AWS S3 / Cloudflare R2 in production)
 - Single Sign-On via Google and/or any generic OIDC provider (Okta, Auth0, Keycloak, etc.), in addition to email/password — both customers and admins can use it, and logging in with the same email as an existing password account auto-links to it
 
 ## Requirements
 
 - Java 17
 - Maven
-- Docker (for local Postgres + MinIO)
+- Docker (for local Postgres + RustFS)
 
 ## Local Development
 
@@ -27,7 +27,7 @@ Bilingual (English / 中文) marketing website for Landmark Construction & ADU, 
    docker compose up -d
    ```
 
-   This starts Postgres on `5432` and MinIO on `9000` (API) / `9001` (console), and creates the `landmark-photos` bucket automatically.
+   This starts Postgres on `5432` and RustFS (S3-compatible storage) on `9000` (API) / `9001` (console), and creates the `landmark-photos` bucket automatically.
 
 2. Set the initial admin account (only needed the first time — the app creates this admin user on startup if no admin exists yet):
 
@@ -53,7 +53,7 @@ Local email sending is not configured by default — quote-request emails will s
 |---|---|---|
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Bootstraps the first admin account on startup (only if none exists) | — |
 | `DB_URL` / `DB_USERNAME` / `DB_PASSWORD` | Postgres connection (prod profile) | local: `jdbc:postgresql://localhost:5432/landmark` |
-| `S3_ENDPOINT` / `S3_REGION` / `S3_BUCKET` / `S3_ACCESS_KEY` / `S3_SECRET_KEY` / `S3_PATH_STYLE_ACCESS` / `S3_PUBLIC_BASE_URL` | S3-compatible object storage config | local: MinIO on `localhost:9000` |
+| `S3_ENDPOINT` / `S3_REGION` / `S3_BUCKET` / `S3_ACCESS_KEY` / `S3_SECRET_KEY` / `S3_PATH_STYLE_ACCESS` / `S3_PUBLIC_BASE_URL` | S3-compatible object storage config | local: RustFS on `localhost:9000` |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USERNAME` / `SMTP_APP_PASSWORD` | SMTP for quote-request notification/confirmation emails (e.g. a Gmail App Password) | none (emails logged, not sent) |
 | `BUSINESS_NOTIFICATION_EMAIL` | Inbox that receives new quote-request notifications | `landmarkadu@gmail.com` |
 | `JWT_SECRET` / `JWT_EXPIRATION_MS` | JWT signing secret and token lifetime | dev-only default secret — **must be overridden in production** |
@@ -87,5 +87,5 @@ backend/            Spring Boot application (Java 17, Maven)
   src/main/resources/
     db/migration/     Flyway schema migrations
     static/           Frontend (HTML/CSS/JS), served at the app root
-docker-compose.yml   Local Postgres + MinIO for development
+docker-compose.yml   Local Postgres + RustFS (S3) for development
 ```

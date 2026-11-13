@@ -15,35 +15,51 @@ services:
       timeout: 5s
       retries: 10
 
-  minio:
-    image: minio/minio:latest
-    command: server /data --console-address ":9001"
+  # S3-compatible object storage for local development.
+  # (MinIO removed its images from Docker Hub in Sept 2026; RustFS is a
+  # maintained, Apache-2.0 drop-in with the same ports and S3 API.)
+  s3:
+    image: rustfs/rustfs:latest
+    command: /data
     environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
+      RUSTFS_ACCESS_KEY: minioadmin
+      RUSTFS_SECRET_KEY: minioadmin
+      RUSTFS_ADDRESS: ":9000"
+      RUSTFS_CONSOLE_ADDRESS: ":9001"
+      RUSTFS_CONSOLE_ENABLE: "true"
     ports:
       - "9000:9000"
       - "9001:9001"
     volumes:
-      - minio-data:/data
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
+      - rustfs-data:/data
 
-  minio-init:
-    image: minio/mc:latest
+  # Creates the photo bucket and makes objects publicly readable
+  # (the frontend loads images straight from S3_PUBLIC_BASE_URL).
+  s3-init:
+    image: amazon/aws-cli:latest
     depends_on:
-      minio:
-        condition: service_healthy
-    entrypoint: >
-      /bin/sh -c "
-      mc alias set local http://minio:9000 minioadmin minioadmin &&
-      mc mb -p local/landmark-photos &&
-      mc anonymous set download local/landmark-photos &&
-      exit 0
-      "
+      - s3
+    environment:
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin
+      AWS_DEFAULT_REGION: us-east-1
+    entrypoint: /bin/sh
+    command:
+      - -c
+      - |
+        set -e
+        S3="aws --endpoint-url http://s3:9000"
+        n=0
+        until $$S3 s3api list-buckets >/dev/null 2>&1; do
+          n=$$((n+1))
+          [ "$$n" -ge 30 ] && echo "s3 did not become ready" && exit 1
+          sleep 2
+        done
+        $$S3 s3api head-bucket --bucket landmark-photos 2>/dev/null || $$S3 s3api create-bucket --bucket landmark-photos
+        cat > /tmp/policy.json <<'EOF'
+        {"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":"*","Action":["s3:GetObject"],"Resource":["arn:aws:s3:::landmark-photos/*"]}]}
+        EOF
+        $$S3 s3api put-bucket-policy --bucket landmark-photos --policy file:///tmp/policy.json
 
   backend:
     build:
@@ -53,14 +69,14 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-      minio-init:
+      s3-init:
         condition: service_completed_successfully
     environment:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
       DB_URL: jdbc:postgresql://postgres:5432/landmark
       DB_USERNAME: landmark
       DB_PASSWORD: landmark
-      S3_ENDPOINT: http://minio:9000
+      S3_ENDPOINT: http://s3:9000
       S3_REGION: us-east-1
       S3_BUCKET: landmark-photos
       S3_ACCESS_KEY: minioadmin
@@ -73,4 +89,4 @@ services:
 
 volumes:
   pgdata:
-  minio-data:
+  rustfs-data:
